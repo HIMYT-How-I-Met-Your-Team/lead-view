@@ -15,7 +15,7 @@ function lead_view_plugin_setup_menu(){
 }
 
 function test_init(){
-    require "./queries.php";
+    require "queries.php";
     require "pages/test.php";
 }
  
