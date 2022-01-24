@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: Lead View
-* Plugin URI: https://www.yourwebsiteurl.com/
+* Plugin URI: myesperto.gbsweb.online/gp2
 * Description: A plugin to show data from the database
 * Version: 1.0
 * Author: gp2
@@ -13,9 +13,10 @@ add_action('admin_menu', 'lead_view_plugin_setup_menu');
 function lead_view_plugin_setup_menu(){
     add_menu_page( 'Lead View Page', 'Lead View', 'manage_options', 'lead-view', 'test_init' );
 }
- 
+
 function test_init(){
-    echo "<h1>Hello World</h1>";
+    require "queries.php";
+    require "pages/test.php";
 }
  
 ?>

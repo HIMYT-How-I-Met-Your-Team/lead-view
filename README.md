@@ -1,2 +1,2 @@
 # lead-view
-Plugin lead view wordpress
+A plugin to show data from the database.
