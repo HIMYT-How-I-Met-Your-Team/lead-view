@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: Lead View
-* Plugin URI: https://www.yourwebsiteurl.com/
+* Plugin URI: myesperto.gbsweb.online/gp2
 * Description: A plugin to show data from the database
 * Version: 1.0
 * Author: gp2
