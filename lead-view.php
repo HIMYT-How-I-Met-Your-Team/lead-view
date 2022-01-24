@@ -15,7 +15,7 @@ function lead_view_plugin_setup_menu(){
 }
  
 function test_init(){
-    require 
+    echo "<h1>Hello World</h1>";
 }
  
 ?>
