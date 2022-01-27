@@ -14,9 +14,12 @@ function lead_view_plugin_setup_menu(){
     add_menu_page( 'Lead View Page', 'Lead View', 'manage_options', 'lead-view', 'test_init' );
 }
 
+define( ‘MY_PLUGIN_URL’, plugin_dir_url( __FILE__ ) );
+
+require "queries.php";
+
 function test_init(){
-    require "queries.php";
-    require "pages/test.php";
+    require "pages/view.php";
 }
  
 ?>
