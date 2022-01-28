@@ -1,26 +1,37 @@
 
-
 <style>
+
   table {
-    width: 85%;
-  }
-  
-  table, th, td {
-    border: 1px solid black;
     border-collapse: collapse;
-    text-align: center;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
   }
 
-  td:nth-child(8) {
-    text-align: justify;
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:not(:first-child):hover th{
+    /* Prevent the hover in th */
+  }
+
+  tr:hover td {
+    background-color: #D6EEEE;
   }
 
   th {
-        cursor: pointer;
+    cursor: pointer;
+  }
+
+  #viewData {
+    overflow-x: auto;
   }
 
 </style>
 
+<div id="viewData">
 <table id="dataList">
     <thead>
         <tr>
@@ -65,6 +76,7 @@ foreach ($results as $r) {
 }
 ?>
 </table>
+</div>
 
 <script>
 function sortTable(n) {
