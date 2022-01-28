@@ -3,7 +3,7 @@
 * Plugin Name: Lead View
 * Plugin URI: myesperto.gbsweb.online/gp2
 * Description: A plugin to show data from the database
-* Version: 1.0
+* Version: 1.1
 * Author: gp2
 * Author URI: myesperto.gbsweb.online/gp2
 **/

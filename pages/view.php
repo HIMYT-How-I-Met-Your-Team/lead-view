@@ -1,12 +1,27 @@
 
 
 <style>
-    th{
+  table {
+    width: 85%;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  td:nth-child(8) {
+    text-align: justify;
+  }
+
+  th {
         cursor: pointer;
-    }
+  }
+
 </style>
 
-<table id="dataList" border = "1">
+<table id="dataList">
     <thead>
         <tr>
             <th onclick="sortTable(0)">
