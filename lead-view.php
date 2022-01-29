@@ -16,10 +16,16 @@ function lead_view_plugin_setup_menu(){
 
 define( ‘MY_PLUGIN_URL’, plugin_dir_url( __FILE__ ) );
 
+//wp_register_style( 'tableStyle', './style/table.css' );
+
 require "queries.php";
 
 function test_init(){
-    require "pages/view.php";
+    wp_register_style('your_namespace', plugins_url('/styles/table.css',__FILE__ ));
+    wp_enqueue_style('your_namespace');
+    //require "pages/view.php";
+    //echo("<hr>");
+    require "pages/testView.php";
 }
  
 ?>
