@@ -9,10 +9,11 @@
 * Text Domain: lead-view
 **/
 
-include "functions/import.php";
-require "functions/queries.php";
+include "utils/import.php";
+require "utils/queries.php";
 
 add_action('admin_menu', 'lead_view_plugin_setup_menu');
+add_action('admin_menu', 'lead_view_plugin_setup_submenu_table');
 add_action('admin_menu', 'lead_view_plugin_setup_submenu_help');
  
 include "init/main.php";
@@ -29,7 +30,7 @@ function printMain(){
     ];
 
     importStyles($styles);
-    require "pages/main.php";
+    require "pages/table.php";
 }
 function printHelp(){
     $styles = [

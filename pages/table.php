@@ -45,11 +45,11 @@ foreach ($results as $r) {
 
     if($r['messaggio'] != "") {
         echo("
-            <article class='row nfl'>
+            <article id='".$r['id']."' class='row nfl'>
         ");
     } else {
         echo("
-            <article class='row nfl no-message'>
+            <article id='".$r['id']."' class='row nfl no-message'>
         ");
     }
 
@@ -64,7 +64,7 @@ foreach ($results as $r) {
 
     foreach($r as $d){
         $key = array_search($d, $r);
-        if ($key != 'messaggio' && $key != 'email' && !array_search($key, $printed)){
+        if ($key != 'messaggio' && $key != 'email' && $key != 'id' && !array_search($key, $printed)){
             if($key == 'submitDate'){
                 echo("
                 <li>
