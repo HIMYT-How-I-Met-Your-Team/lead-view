@@ -1,8 +1,10 @@
 <?php
 
-function getter(){
+function getter($sort){
     global $wpdb;
-    $results = $wpdb->get_results( "SELECT nome, cognome, email, telefono, ragSociale, provincia, attivita, messaggio, submitDate FROM {$wpdb->prefix}formdata");
+    $results = $wpdb->get_results( 
+        $wpdb->prepare( "SELECT nome, cognome, email, telefono, ragSociale, provincia, attivita, messaggio, submitDate FROM {$wpdb->prefix}formdata ORDER BY {$sort} ASC")
+    );
     return $results;
 }
 
