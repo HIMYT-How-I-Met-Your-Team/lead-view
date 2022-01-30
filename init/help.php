@@ -14,7 +14,7 @@ function lead_view_plugin_setup_submenu_help(){
     add_submenu_page( $parentName, $pageTitle, 
     $menuTitle, $permissions, 
     $uniqueName, $constructor );
-}
 
+}
 
 ?>
