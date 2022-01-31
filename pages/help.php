@@ -51,7 +51,7 @@
 </div>
 <div id="download" class="expandable removed">
     <h4>
-        function <span class="txFunction">download</span> ( (<span class="txArgType">String</span>)<span class="txArgName">$name_of_file</span>, <span class="txArgType">String</span>)<span class="txArgName">$text_to_download</span> );
+        function <span class="txFunction">download</span> ( (<span class="txArgType">String</span>)<span class="txArgName">$name_of_file</span>, (<span class="txArgType">String</span>)<span class="txArgName">$text_to_download</span> );
     </h4>
     <p>
         <br>
