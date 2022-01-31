@@ -3,7 +3,7 @@
 function getter($sort){
     global $wpdb;
     $results = $wpdb->get_results( 
-        $wpdb->prepare( "SELECT nome, cognome, email, telefono, ragSociale, provincia, attivita, messaggio, submitDate FROM {$wpdb->prefix}formdata ORDER BY {$sort} ASC")
+        $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}formdata ORDER BY {$sort} ASC")
     );
     return $results;
 }
@@ -16,6 +16,23 @@ function inserter($data){
                 $table = $wpdb->prefix.'formdata';
                 $wpdb->insert($table,$data);
             }
+        }
+    }catch(Exception $e){
+        echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+}
+
+function deleter($id){
+    try{
+        if(!empty($id)){
+            global $wpdb;
+            $table = $wpdb->prefix.'formdata';
+
+            return $wpdb->delete(
+                $table,
+                ['id' => $id],
+                ['%d']
+            );
         }
     }catch(Exception $e){
         echo 'Caught exception: ',  $e->getMessage(), "\n";

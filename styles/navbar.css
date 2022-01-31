@@ -1,0 +1,35 @@
+/* The navigation bar */
+.navbar {
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the bottom of the page */
+    width: 100%; /* Full width */
+    background-color: #454545;
+    z-index: 20;
+    border-top: 3px solid #6d6666;
+    border-radius: 15px 0px 0px 0px;
+  }
+  
+  /* Links inside the navbar */
+  .navbar div {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-left: 3px solid #6d6666;
+    border-radius: 15px 0px 0px 0px;
+    cursor: pointer;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar div:hover {
+    background: #268695;
+    border-left: 3px solid #6d6666;
+    color: black;
+  }
+  
+  /* Main content */
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
