@@ -44,7 +44,7 @@
     </p>
 </div>
 <hr />
-<div class="clickable" onclick="show('getter');">
+<div class="clickable" onclick="show('download');">
     <h2>
         <i>Download</i> - Single Download
     </h2>
@@ -62,7 +62,7 @@
     </p>
 </div>
 <hr />
-<div class="clickable" onclick="show('getter');">
+<div class="clickable" onclick="show('downloadAll');">
     <h2>
         <i>Download All</i> - Download all the data
     </h2>
