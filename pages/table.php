@@ -1,8 +1,8 @@
 <?php
-    $id = $_GET["delete"];
-    if($id) {
-        deleter($id);
-    }
+$id = $_GET["delete"];
+if ($id) {
+    deleter($id);
+}
 ?>
 <script>
     var dataList = [];
@@ -22,11 +22,11 @@
 
 <section class="wrapper">
     <div class="hidden" id="deletionMessage">
-        <h2> Click on a row to delete it  </h2>
+        <h2> Click on a row to delete it </h2>
         <h4> (<i>Deletion is permanent!</i>) </h4>
     </div>
     <div class="hidden" id="downloadMessage">
-        <h2> Click on a row to download its contents  </h2>
+        <h2> Click on a row to download its contents </h2>
     </div>
     <main class="row title">
         <ul>
@@ -59,79 +59,79 @@
 
 
 
-<?php 
-$sort = "submitDate";
+    <?php
+    $sort = "submitDate";
 
-if(isset($_GET["sort"]))
-    $sort = $_GET["sort"];
+    if (isset($_GET["sort"]))
+        $sort = $_GET["sort"];
 
-$results = getter(htmlspecialchars($sort));
+    $results = getter(htmlspecialchars($sort));
 
-$i = 0;
+    $i = 0;
 
-foreach ($results as $r) {
-    $r = (array)$r;
-    $printed = []; //for some reason sometimes there are repeated values, this fixes the repetitions
+    foreach ($results as $r) {
+        $r = (array)$r;
+        $printed = []; //for some reason sometimes there are repeated values, this fixes the repetitions
 
-    if($r['messaggio'] != "") {
-        echo("
-            <article id='".$r['id']."' class='row nfl'>
+        if ($r['messaggio'] != "") {
+            echo ("
+            <article id='" . $r['id'] . "' class='row nfl'>
         ");
-    } else {
-        echo("
-            <article id='".$r['id']."' class='row nfl no-message'>
+        } else {
+            echo ("
+            <article id='" . $r['id'] . "' class='row nfl no-message'>
         ");
-    }
+        }
 
-    echo("
+        echo ("
     <script>
-        dataList.push('|".implode('|', $r)."|');
+        dataList.push('|" . implode('|', $r) . "|');
     </script>
-    <input class='hidden' id='hidden".$r["id"]."' value='|".implode('|', $r)."|'>
-    <ul onclick='clickFunctions(".$r["id"].");'>
+    <input class='hidden' id='hidden" . $r["id"] . "' value='|" . implode('|', $r) . "|'>
+    <ul onclick='clickFunctions(" . $r["id"] . ");'>
         <li class='larger'>
-            <a href='mailto:".$r['email']."'>
-            ".$r['email']."
+            <a href='mailto:" . $r['email'] . "'>
+            " . $r['email'] . "
             </a>
         </li>
     ");
 
-    foreach($r as $d){
-        $key = array_search($d, $r);
-        if ($key != 'messaggio' && $key != 'email' && $key != 'id' && !array_search($key, $printed)){
-            if($key == 'submitDate'){
-                echo("
+        foreach ($r as $d) {
+            $key = array_search($d, $r);
+            if ($key != 'messaggio' && $key != 'email' && $key != 'id' && !array_search($key, $printed)) {
+                if ($key == 'submitDate') {
+                    echo ("
                 <li>
-                ".date("d/m/Y H:i", strtotime($d))."
+                " . date("d/m/Y H:i", strtotime($d)) . "
                 </li>
                 ");
-            }else {
-                echo("
+                } else {
+                    echo ("
                 <li>
-                ".$d."
+                " . $d . "
                 </li>
                 ");
+                }
+
+                $printed[] = $key;
             }
-
-            $printed[] = $key;
         }
-    }
 
-    if($r['messaggio'] != ""){
-        echo("
+        if ($r['messaggio'] != "") {
+            echo ("
             <ul class='more-content'>
                 <li>
-                ".$r['messaggio']."
+                " . $r['messaggio'] . "
                 </li>
             </ul>
         ");
-    }
-    echo("
+        }
+        echo ("
     </article>
     ");
-    
-    $i++;
-}
-?>
-    
+
+        $i++;
+    }
+    ?>
+
 </section>
