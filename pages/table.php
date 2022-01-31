@@ -1,4 +1,19 @@
 
+<div class="navbar">
+    <div>
+        Delete
+    </div>
+    <div>
+        Contact
+    </div>
+    <div>
+        Download
+    </div>
+    <div>
+        Download All
+    </div>
+</div>
+
 <section class="wrapper">
     <main class="row title">
         <ul>
@@ -99,4 +114,3 @@ foreach ($results as $r) {
 ?>
     
 </section>
-

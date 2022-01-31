@@ -26,7 +26,8 @@ define( ‘MY_PLUGIN_URL’, plugin_dir_url( __FILE__ ) );
 
 function printMain(){
     $styles = [
-        "table"
+        "table",
+        "navbar"
     ];
 
     importStyles($styles);
