@@ -21,4 +21,21 @@ function inserter($data){
         echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
 }
+
+function deleter($id){
+    try{
+        if(!empty($id)){
+            global $wpdb;
+            $table = $wpdb->prefix.'formdata';
+
+            return $wpdb->delete(
+                $table,
+                ['id' => $id],
+                ['%d']
+            );
+        }
+    }catch(Exception $e){
+        echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+}
 ?>

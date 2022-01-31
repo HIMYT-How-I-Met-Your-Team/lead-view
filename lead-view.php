@@ -29,8 +29,12 @@ function printMain(){
         "table",
         "navbar"
     ];
+    $scripts = [
+        "table"
+    ];
 
     importStyles($styles);
+    importScripts($scripts);
     require "pages/table.php";
 }
 function printHelp(){
